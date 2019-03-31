@@ -17,6 +17,10 @@ def check_mediawiki(ver):
     print ('--> MediaWiki version:', ver)
     print ('URL: https://www.cvedetails.com/vulnerability-list/vendor_id-2360/Mediawiki.html')
 
+def check_joomla(ver):
+    print ('--> Joomla! without web-readable version. Please check root → libraries → joomla → version.php.')
+    print ('URL: https://www.cvedetails.com/vulnerability-list/vendor_id-3496/Joomla.html')
+
 # <a href="http://www.simpleportal.net/" target="_blank" class="new_win">SimplePortal 2.3.5 &copy; 2008-2012, SimplePortal</a>
 def check_simpleportal(html):
     generators = re.findall(">SimplePortal ([0-9.]*)", html)
@@ -37,6 +41,8 @@ def check_web(html):
             check_drupal(ver)
         elif gf[0] == 'MediaWiki':
             check_mediawiki(ver)
+        elif gf[0] == 'Joomla!':
+            check_joomla(ver)
         else:
             print ('Unknown/unhandled generator:', gf)
     if len(generators) == 0:
