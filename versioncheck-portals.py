@@ -8,6 +8,7 @@ import html.parser
 def check_wordpress(ver):
     print ('--> WordPress version:', ver)
     print ('URL: https://www.cvedetails.com/vulnerability-list/vendor_id-2337/Wordpress.html')
+    print ('URL: https://wpvulndb.com/wordpresses')
 
 def check_drupal(ver):
     print ('--> Drupal version:', ver)
