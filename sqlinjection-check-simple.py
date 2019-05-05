@@ -3,7 +3,6 @@
 import re
 import os
 import sys
-import urllib.request
 
 for url in sys.argv[1:]:
     sqlmapres = os.popen("sqlmap --batch --forms --level=3 -u '%s'"%(url)).read()
