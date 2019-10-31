@@ -4,6 +4,8 @@ import os
 import re
 import sys
 
+# git clone https://github.com/drwetter/testssl.sh
+
 URL = sys.argv[1]
 
 print ("A TLS vizsgálat ideje körülbelül 2 perc ...")
